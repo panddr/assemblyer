@@ -2,3 +2,7 @@
 span &nbsp;/&nbsp;
 = link_to 'EN', en_path
 br/
+- if admin_signed_in?
+  = link_to "Log out", destroy_admin_session_path, :method=>'delete'
+- else
+  = link_to "login", new_admin_session_path
