@@ -1,0 +1,61 @@
+input, textarea {
+  display: inline-block;
+
+  font-family: $base-font-family;
+  outline: none;
+  border-radius: 0;
+  background: $color-grey-light;
+  border: 0;
+  resize: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: $grid/2 $grid/2;
+  margin: 0;
+  font-size: 1.3rem;
+
+  &:focus::-webkit-input-placeholder {
+    color: $color-main;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $color-grey-light inset;
+    background: $color-grey-light;
+  }
+}
+
+input[type=submit], .button, button {
+  display: inline-block;
+
+  font-family: $base-font-family;
+  background: white;
+  box-shadow: none;
+  transition: background .3s $base-transition-style, color .3s $base-transition-style, border-color .3s $base-transition-style, opacity.3s $base-transition-style;
+  padding: $grid/4 $grid;
+  cursor: pointer;
+  color: $color-main;
+  -webkit-appearance: none;
+  border: 1px solid $color-main;
+  font-variant-numeric: normal;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $color-main;
+    border-color: $color-main;
+    color: $color-grey-light;
+    text-decoration: initial;
+  }
+
+  @include respond-to(medium) {
+    padding: $grid/4 $grid/2*3;
+  }
+}
+
+input[type=file] {
+  background: white;
+  font-size: .8rem;
+  padding: 0;
+}
+
+button:focus {
+  outline:0;
+}
