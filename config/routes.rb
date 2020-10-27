@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions'
   }
   
-  root to: 'homepage#ru'
-  get '/en', to: 'homepage#en'
+
+  scope '(:locale)', locale: /en|ru/ do
+    root to: 'homepage#index'
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

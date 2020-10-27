@@ -1,5 +1,3 @@
 class HomepageController < ApplicationController
-  def ru; end
-
-  def en; end
+  def index;  end
 end
