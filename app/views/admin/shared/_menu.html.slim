@@ -3,7 +3,26 @@
     .sidebar
       ul.nav#side-menu
         li style="margin-bottom:20px;"
-          a href="/" Back to website
+          a href="/" На сайт
+        li style="margin-bottom:20px;"
+          = link_to "Выйти", destroy_admin_session_path, :method=>'delete'
+        li style="margin-bottom:20px;"
+        li class = ('active' if controller_name == 'mainpage')
+          = link_to admin_mainpage_path
+            span.nav-label Главная
+        li style="margin-bottom:20px;"
+        li class = ('active' if controller_name == 'about')
+          = link_to admin_about_path
+            span.nav-label О проекте
+        li style="margin-bottom:20px;"
+        li class = ('active' if controller_name == 'programme')
+          = link_to admin_programme_path
+            span.nav-label Программа
+        li style="margin-bottom:20px;"
+        li class = ('active' if controller_name == 'contacts')
+          = link_to admin_contacts_path
+            span.nav-label Контакты
+        li style="margin-bottom:20px;"
         li class = ('active' if controller_name == 'event')
           = link_to admin_event_path
-            span.nav-label Event
+            span.nav-label События
