@@ -1,0 +1,7 @@
+
+    = link_to 'EN', request.params.merge(locale: 'en')
+	span &nbsp;/&nbsp;
+	- path = request.path
+	- path.slice!('/en')
+	- path = path.present? ? path : '/'
+	= link_to 'RU', path
