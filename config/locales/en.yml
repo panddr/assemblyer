@@ -30,4 +30,13 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  header:
+    main: '<a href="/en">[photo.Way to homepage</a>'
+    about: '<a href="/en/about">About</a>'
+    contact: '<a href="/en/contacts">Contacts</a>'
+    programm: '<a href="/en/programme">Programme</a>'
+  footer:
+    description: 'The EastEast project is published by the <a href="/en/cca">Cultural Creative Agency</a>. CCA brings together an intellectual approach and aesthetic vision in order to build new ways of representation for cultures, countries, and their people. Its vision is to open up a cartography of solidarity across borders. While studying the diversity of human societies in time and space, CCA links the local and the global, the material and the spiritual, and the past and the present in a search for commonalities, offering various approaches to understanding and responding to contemporary challenges.'
+  meta:
+    homepage_description: 'Stories that bring forth new perspectives and revive unfairly forgotten ones'
+

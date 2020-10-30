@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    root to: 'index#index'
+    root to: 'event#index'
     get '/event', to: 'event#index'
     get '/mainpage', to: 'mainpage#index'
     get '/programme', to: 'programme#index'
