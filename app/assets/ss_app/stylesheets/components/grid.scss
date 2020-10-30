@@ -1,0 +1,289 @@
+.homepage,
+.issue-show {
+	.grid-list > .wrapper > .item {
+		&:first-child {
+			text-align: center;
+			width: 100%;
+
+			&.vertical {
+				@include respond-to(medium) {
+					width: 70%;
+				}
+			}
+
+			> .category {
+				padding-left: 0;
+			}
+
+			> .info {
+				> .image-container {
+					margin-bottom: $grid/2;
+					width: 100%;
+
+					@include respond-to(medium) {
+						margin-bottom: $grid/2*3;
+					}
+				}
+
+				> h2 {
+					padding: 0;
+					text-transform: none;
+					@include header-font-size(1.5rem,1.5rem,2.5rem,2.5rem,2.5rem);
+
+					@include respond-to(medium) {
+						margin: auto;
+						margin-bottom: $grid;
+						line-height: 2.8rem;
+					}
+				}
+
+				> p {
+					padding-left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// .homepage-new {
+// 	.grid-list > .wrapper > .item {
+// 		&:nth-child(3) {
+// 			display: none;
+
+// 			@include respond-to(large) {
+// 				display: block;
+// 			}
+
+// 			@include respond-to(large) {
+// 				display: block;
+// 			}
+// 		}
+// 	}
+// }
+
+.grid-list {
+	width: 100%;
+	max-width: $sizeL;
+	margin: 0 auto;
+
+	> .wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include respond-to(medium) {
+			margin-left: -$grid;
+			margin-right: -$grid;
+		}
+
+		&.music-atlas {
+			> .item {
+				@include respond-to(medium) {
+					width: 25%;
+				}
+
+				&:nth-child(3) {
+					@include respond-to(medium) {
+						display: block;
+					}
+				}
+
+				> .info {
+					display: inline-block;
+
+					> h2 {
+						text-transform: none;
+					}
+
+					> p {
+						display: none;
+					}
+
+					> .image-container {
+						@include respond-to(medium) {
+							width: 80%;
+						}
+					}
+				}
+			}
+		}
+
+		> .title {
+			width: 100%;
+
+			@include respond-to(medium) {
+				padding: 0 $grid;
+			}
+
+			> h2 {
+				border-bottom: 1px solid $color-main;
+		  	padding-bottom: $grid/2;
+				width: 100%;
+				margin-bottom: $grid;
+
+				> a:hover {
+					opacity: .5;
+				}
+			}
+		}
+
+		> .item {
+			margin-bottom: $grid*3;
+			width: 100%;
+			text-align: center;
+
+			@include respond-to(medium) {
+				width: calc(100%/3);
+				margin-bottom: $grid*4;
+				padding: 0 $grid;
+				text-align: left;
+			}
+
+			// @include respond-to(large) {
+			// 	width: calc(100%/3);
+			// }
+
+			&.vertical {
+				> .info {
+					display: block;
+
+					> .image-container {
+						margin: auto;
+						width: 80%;
+
+						@include respond-to(medium) {
+							margin: inherit;
+							width: 70%;
+						}
+					}
+				}
+			}
+
+			.date,
+			.category {
+				display: none;
+			}
+
+			// > .category {
+			// 	display: none;
+			// 	// display: inline-block;
+
+			// 	text-transform: uppercase;
+			// 	margin-bottom: $grid/2;
+			// 	width: 100%;
+			// 	font-size: 1rem;
+			// 	line-height: 1.2rem;
+
+			// 	@include respond-to(medium) {
+			// 		margin-bottom: $grid;
+			// 		padding-left: $grid;
+			// 	}
+
+			// 	&:hover {
+			// 		opacity: .5;
+			// 	}
+
+			// 	&:empty {
+			// 		display: none;
+			// 		margin: 0;
+			// 	}
+			// }
+
+			// > .date {
+			// 	display: inline-block;
+
+			// 	text-transform: uppercase;
+			// 	margin-bottom: $grid/2;
+			// 	width: 100%;
+			// 	font-size: 1rem;
+			// 	line-height: 1.2rem;
+
+			// 	@include respond-to(medium) {
+			// 		margin-bottom: $grid;
+			// 		padding-left: $grid;
+			// 		font-size: 1.2rem;
+			// 		line-height: 1.4rem;
+			// 	}
+			// }
+
+			> .info {
+				width: 100%;
+
+				&:hover {
+					h2,
+					p {
+						opacity: .5;
+					}
+				}
+
+				> .image-container {
+					> .image-wrapper {
+						position: relative;
+
+						background: $color-grey-light;
+						height: 0;
+						width: 100%;
+
+						> .image {
+							position: absolute;
+
+							width: 100%;
+						  height: auto;
+
+
+							> img {
+								display: block;
+								width: 100%;
+							}
+						}
+					}
+				}
+
+				> h2,
+				> p {
+					font-size: 1rem;
+					line-height: 1.2rem;
+
+					@include respond-to(medium) {
+						width: 90%;
+					}
+				}
+
+				> h2 {
+					text-transform: uppercase;
+					margin-top: 14px;
+					margin-bottom: 3px;
+
+					@include respond-to(medium) {
+						margin-top: 28px;
+						// padding-left: $grid;
+					}
+
+					&.description-hidden {
+						text-transform: none;
+						font-size: 1rem;
+					}
+				}
+
+				> p {
+					margin: 0;
+
+					// @include respond-to(medium) {
+					// 	padding-left: $grid;
+					// }
+				}
+			}
+		}
+
+		> .subscribe {
+			margin-bottom: $grid*4;
+	  	margin-top: $grid*2;
+
+	  	@include respond-to(medium) {
+				margin-top: 0;
+				margin-bottom: $grid*6;
+			}
+		}
+	}
+}

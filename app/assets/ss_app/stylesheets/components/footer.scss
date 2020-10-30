@@ -1,0 +1,82 @@
+.footer-main {
+	width: 100%;
+	padding: $grid/4*3;
+
+	> .wrapper {
+		display: flex;
+		flex-wrap: wrap;
+
+		border-top: 1px solid $color-main;
+  	padding-top: $grid/4*3;
+  	max-width: $sizeL;
+		margin: 0 auto;
+
+  	> .menu {
+  		width: 100%;
+
+  		text-transform: uppercase;
+  		margin-bottom: $grid*3;
+
+  		@include respond-to(medium) {
+  			width: 30%;
+  		}
+
+  		> .group {
+  			margin-bottom: 1rem;
+
+  			> a {
+	  			display: block;
+
+	  			&:hover {
+	  				opacity: .5;
+	  			}
+	  		}
+
+        &.lang {
+          > a {
+            display: inline-block;
+          }
+        }
+
+        &.social {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0;
+
+          > a {
+            margin-right: $grid/2;
+
+            &.newsletter-link {
+              width: 100%;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+  		}
+  	}
+
+  	> .about {
+  		width: 100%;
+
+  		@include respond-to(medium) {
+  			width: 70%;
+  		}
+
+      a {
+        text-decoration: underline;
+      }
+
+  		> div {
+  			text-transform: uppercase;
+  			margin-bottom: $grid;
+
+        @include respond-to(medium) {
+          padding-left: $grid;
+        }
+  		}
+  	}
+	}
+}

@@ -1,0 +1,441 @@
+.posts-show {
+	border-top: 1px solid $color-main;
+  padding-top: $grid;
+
+	> .wrapper {
+		position: relative;
+
+		width: 100%;
+		max-width: $sizeL;
+		margin: 0 auto;
+
+		> .admin-actions {
+			display: none;
+
+			@include respond-to(large) {
+				display: flex;
+
+				position: absolute;
+				right: 0; top: 0;
+
+				text-transform: uppercase;
+				line-height: 1;
+				letter-spacing: 1.1px;
+				font-size: .7rem;
+
+				> a {
+					background: $color-grey-light;
+					padding: $grid/4 $grid/2;
+					margin-left: $grid/2;
+				}
+			}
+		}
+
+		> .category {
+			display: inline-block;
+
+			text-transform: uppercase;
+			margin-bottom: $grid/2;
+
+			// @include respond-to(medium) {
+			// 	padding-left: $grid;
+			// }
+		}
+
+		> a.category {
+			&:hover {
+				opacity: .5;
+			}
+		}
+
+		> h1 {
+			font-family: $title-font-family;
+		}
+
+		> .post-body {
+			font-family: $base-font-family;
+			margin-bottom: $grid*3;
+
+			@include respond-to(medium) {
+				margin-bottom: $grid*4;
+			}
+
+			> .image-gallery {
+			  position: relative;
+			  overflow: hidden;
+
+			  @include respond-to(medium) {
+	        width: 90%;
+	      }
+
+			  @include respond-to(large) {
+			    width: 75%;
+			  }
+
+			  &.portrait {
+			  	@include respond-to(medium) {
+		        width: 70%;
+		      }
+
+		      @include respond-to(large) {
+		        width: 50%;
+		      }
+			  }
+
+			  .cursor {
+			    position: fixed;
+			    top: 200px;
+			    z-index: 999;
+			    color: white;
+			    font-size: .8em;
+			  }
+
+			  > .info {
+			    line-height: 1rem;
+			    margin-bottom: $grid;
+			    user-select: none;
+
+			    > .description {
+			    	user-select: text;
+			      margin-bottom: $grid;
+			      font-size: .8rem;
+			    	max-width: 700px;
+
+			      @include respond-to(medium) {
+				    	padding-left: $grid*3;
+				    }
+			    }
+
+			    > .image-count {
+			    	@include respond-to(medium) {
+				    	padding-left: $grid*3;
+				    }
+
+				    > span {
+				    	cursor: pointer;
+				    }
+			    }
+			  }
+
+			  > ul {
+			    display: flex;
+			    flex-wrap: wrap;
+
+			    position: relative;
+
+			    list-style: none;
+			    list-style-image: none;
+
+			    > li {
+			      position: relative;
+			      margin: 0;
+
+			      > .wrapper {
+							position: relative;
+							height: 0;
+							width: 100%;
+
+							> .image {
+								position: absolute;
+
+								width: 100%;
+							  height: auto;
+
+								> img {
+									display: block;
+
+									width: 100%;
+									user-select: none;
+								}
+							}
+						}
+
+			      > .button {
+			        position: absolute;
+			        top: $grid/2; right: $grid/2;
+
+			        background: rgba(0, 0, 0, 0.5);
+			        height: $grid;
+			        font-size: 12px;
+			        border-color: white;
+			        color: white;
+
+			        @include respond-to(small) {
+			          display: none;
+			        }
+			      }
+			    }
+
+			    figcaption {
+			    	user-select: none;
+			    }
+			  }
+			}
+
+			> .image-container {
+				> .image {
+					position: relative;
+
+					background: $color-grey-light;
+					height: 0;
+					width: 100%;
+
+					> .wrapper {
+						position: absolute;
+
+						width: 100%;
+					  height: auto;
+
+					  > img {
+							display: block;
+
+							width: 100%;
+						}
+					}
+				}
+
+				&.vertical {
+					@include respond-to(medium) {
+		        width: 90%;
+		      }
+
+		      @include respond-to(large) {
+		        width: 75%;
+		      }
+				}
+			}
+
+			> figure {
+		    margin: 0;
+		    margin: $grid*2 0;
+
+		    @include respond-to(medium) {
+		    	margin: $grid*4 0;
+		    }
+
+		    &:first-child {
+		    	margin-top: 0;
+		    }
+			}
+
+			.image-grid {
+				> ul {
+					display: flex;
+					flex-wrap: wrap;
+
+					@include respond-to(medium) {
+		        margin-left: -$grid/2;
+		        margin-right: -$grid/2;
+		      }
+
+					> li {
+						width: 100%;
+						margin-bottom: $grid/2;
+
+						@include respond-to(medium) {
+			        padding: $grid/2;
+			        margin-bottom: 0;
+			      }
+
+			      &:last-child {
+			      	margin-bottom: 0;
+			      }
+
+						&.col-2 {
+							@include respond-to(medium) {
+					    	width: 50%;
+					    }
+						}
+
+						> .wrapper {
+							position: relative;
+							height: 0;
+							width: 100%;
+
+							> .image {
+								position: absolute;
+
+								width: 100%;
+							  height: auto;
+
+								> img {
+									display: block;
+
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			a {
+				text-decoration: underline;
+			}
+
+			> h2,
+			> p,
+			> blockquote {
+				width: 100%;
+
+				@include respond-to(large) {
+					padding-right: 25%;
+				}
+			}
+
+			> h2 {
+				font-family: $base-font-family;
+				font-size: 1rem;
+				line-height: 1rem;
+				text-transform: uppercase;
+				margin: $grid/2*3 0;
+			}
+
+			> blockquote {
+				font-size: 1.2rem;
+				line-height: 1.4rem;
+				margin: 0;
+				margin: $grid*2 0;
+
+			  @include respond-to(medium) {
+			  	margin: $grid*4 0;
+			  	margin-left: $grid*3;
+			  	font-size: 1.6rem;
+					line-height: 1.8rem;
+			  }
+			}
+
+			name,
+			full-name {
+				text-transform: uppercase;
+				margin-right: $grid;
+			}
+
+			.instagram-media {
+				width: 100%!important;
+				min-width: auto!important;
+			}
+
+			> .embed {
+		    width: 100%;
+
+		    iframe {
+		    	display: block;
+
+					background: $color-grey-light;
+		    	width: 100%;
+		    }
+	    }
+
+	    > .indent-text {
+	    	@include respond-to(medium) {
+	    		position: relative;
+
+			  	padding-left: $grid*3;
+
+			  	> name {
+			  		position: absolute;
+			  		left: 0; top: 0;
+			  	}
+			  }
+	    }
+
+	    > .lead-text {
+	    	width: 100%;
+
+	    	margin: $grid*2 0;
+	    	font-size: 1.2rem;
+				line-height: 1.4rem;
+
+				@include respond-to(medium) {
+					font-size: 1.6rem;
+					line-height: 1.8rem;
+		      margin: $grid*4 0;
+		    }
+
+		    @include respond-to(large) {
+					padding-right: 0;
+		    }
+	    }
+
+	    figcaption {
+	    	font-size: .8rem;
+	    	max-width: 700px;
+	    	margin-top: $grid/2;
+
+	    	@include respond-to(medium) {
+		    	padding-left: $grid*3;
+		    }
+	    }
+		}
+
+		> .contributors {
+			display: flex;
+			flex-wrap: wrap;
+
+			font-family: $base-font-family;
+			margin-bottom: $grid*3;
+
+			@include respond-to(medium) {
+				margin-bottom: $grid*4;
+			}
+
+			&.multiple {
+				> .title {
+					text-align: center;
+				}
+			}
+
+			> .title {
+				width: 100%;
+				text-transform: uppercase;
+				margin-bottom: $grid;
+			}
+
+			> .contributor {
+				margin-bottom: $grid*2;
+
+				@include respond-to(medium) {
+					width: 50%;
+					padding-right: $grid*2;
+				}
+
+				> a {
+					display: block;
+
+					margin-bottom: $grid;
+					text-decoration: underline;
+
+					&:hover {
+						opacity: .5;
+					}
+
+					> .name {
+						text-transform: uppercase;
+					}
+				}
+
+				> .bio {
+					> a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.related {
+	> h2 {
+		border-top: 1px solid $color-main;
+		font-size: 1rem;
+		text-transform: uppercase;
+		text-align: center;
+		padding-top: $grid/4;
+		margin-bottom: $grid*2;
+
+		@include respond-to(medium) {
+			margin-bottom: $grid*3;
+		}
+	}
+}

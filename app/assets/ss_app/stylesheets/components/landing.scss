@@ -1,0 +1,190 @@
+body.body-landing {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing {
+  flex: 1 0 auto;
+
+  > header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    font-size: .8rem;
+    padding: $grid/4*3;
+
+    margin: auto;
+    max-width: $sizeL;
+
+    > .social {
+      > a {
+        text-decoration: underline;
+        margin-right: $grid/4;
+      }
+
+      @include respond-to(medium) {
+        width: 50%;
+      }
+    }
+
+    > .lang {
+      > a {
+        text-decoration: underline;
+      }
+
+      @include respond-to(medium) {
+        width: 50%;
+      }
+    }
+  }
+
+  > .content {
+    padding: $grid/4*3;
+    margin: auto;
+    max-width: $sizeXL;
+
+    @include respond-to(medium) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    > .col {
+      @include respond-to(medium) {
+        width: 50%;
+      }
+
+      &.col-logo {
+        @include respond-to(medium) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+        }
+      }
+
+      > .logo {
+        width: $grid*10;
+        padding-left: $grid/2*3;
+        padding-top: $grid/2;
+        padding-bottom: $grid*2;
+
+        @include respond-to(medium) {
+          padding: 0;
+        }
+      }
+
+      > .about {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        margin-bottom: $grid*2;
+
+         @include respond-to(medium) {
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+        }
+      }
+
+      > .subscribe {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+
+         @include respond-to(medium) {
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+        }
+
+        > div {
+          padding-left: $grid/2*3;
+          margin-bottom: $grid;
+        }
+
+        > #subscribe-mc {
+          padding-left: 0;
+          margin-bottom: $grid/4*5;
+
+          > form {
+            display: flex;
+
+            position: relative;
+
+            border-bottom: 1px solid $color-main;
+            padding-bottom: $grid/5;
+
+            > input {
+              border: 0;
+              padding: 0;
+              width: 100%;
+              font-size: 1.3rem;
+
+               @include respond-to(medium) {
+                font-size: 1.6rem;
+              }
+            }
+
+            > button {
+              background: white;
+              border: 0;
+              padding: 0 $grid/2;
+              font-size: .8rem;
+
+              &:hover {
+                opacity: .5;
+                color: $color-main;
+              }
+            }
+
+            > .msg-alert {
+              position: absolute;
+              bottom: -28px;
+
+              font-size: .7rem;
+
+              @include respond-to(medium) {
+                font-size: .8rem;
+              }
+
+              > p {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-landing {
+  flex-shrink: 0;
+
+  background: $color-orange;
+  font-size: .8rem;
+  padding: $grid/2*3 $grid/4*3;
+
+  > .wrapper {
+    margin: auto;
+    max-width: $sizeL;
+
+    > div {
+      padding-left: $grid/2*3;
+      margin-bottom: $grid;
+
+      @include respond-to(medium) {
+        margin-left: 50%;
+      }
+    }
+
+    > p {
+      margin-bottom: 0;
+
+      @include respond-to(medium) {
+        margin-left: 50%;
+      }
+
+      > a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

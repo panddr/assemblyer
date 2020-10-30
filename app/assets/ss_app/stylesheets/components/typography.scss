@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'CSTMX';
+  // src: url('../../fonts/CSTMX_Regular.woff2') format('woff2'),
+      //  url('../../fonts/CSTMX_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CSTMX Title';
+  // src: url('../../fonts/cstm_xprmntl_02_regular-regular-trial-webfont.woff2') format('woff2'),
+      //  url('../../fonts/cstm_xprmntl_02_regular-regular-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  // src: url('../../fonts/ibmplexserif-regular-webfont.woff2') format('woff2'),
+      //  url('../../fonts/ibmplexserif-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  // src: url('../../fonts/ibmplexserif-italic-webfont.woff2') format('woff2'),
+      //  url('../../fonts/ibmplexserif-italic-webfont.woff') format('woff');
+  font-weight: italic;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  // src: url('../../fonts/notoserif-regular-webfont.woff2') format('woff2'),
+      //  url('../../fonts/notoserif-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  // src: url('../../fonts/notoserif-italic-webfont.woff2') format('woff2'),
+      //  url('../../fonts/notoserif-italic-webfont.woff') format('woff');
+  font-weight: italic;
+  font-style: italic;
+}
+
+@mixin header-font-size($size-normal, $size-small, $size-medium, $size-large, $size-xlarge) {
+  font-family:  $accent-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  margin-top: 0;
+  margin-bottom: $grid/2;
+  font-size: $size-normal;
+  line-height: 1.8rem;
+  @include respond-to(small)  { font-size: $size-small; }
+  @include respond-to(medium) { font-size: $size-medium; margin-bottom: $grid; }
+  @include respond-to(large)  { font-size: $size-large; }
+  @include respond-to(x-large)  { font-size: $size-xlarge; }
+}
+
+h1 {
+  @include header-font-size(1.5rem,1.5rem,3rem,3rem,3rem);
+  margin-bottom: $grid;
+  @include respond-to(medium) { line-height: 3.2rem; margin-bottom: $grid/2*3; }
+}
+
+h2 {
+  @include header-font-size(1.5rem,1.5rem,2.5rem,2.5rem,2.5rem);
+  @include respond-to(medium) { line-height: 2.6rem; }
+}
+
+h3 {
+  @include header-font-size(1.6rem,1.6rem,1.6rem,1.6rem,1.6rem);
+}
+
+h4 {
+  @include header-font-size(1rem,1rem,1rem,1rem,1rem);
+}

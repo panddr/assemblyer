@@ -1,0 +1,84 @@
+.issue-show {
+	padding-top: $grid*2;
+
+	@include respond-to(medium) {
+		padding-top: 0;
+	}
+
+	> header {
+		position: relative;
+
+		border-top: 1px solid $color-main;
+		padding: $grid/4*3;
+		margin-bottom: $grid*2;
+
+		@include respond-to(medium) {
+			display: flex;
+			flex-wrap: wrap;
+
+			margin-bottom: $grid*6;
+		}
+
+		> .bg {
+			position: absolute;
+			left: 0; top: 0;
+			z-index: -1;
+
+			width: 100%; height: 100%;
+			opacity: .3;
+		}
+
+		> .issue-date-number {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			// font-family: $base-font-family;
+			text-transform: uppercase;
+			margin-bottom: $grid;
+
+			@include respond-to(medium) {
+				display: inline-block;
+
+				width: 50%;
+				padding-right: $grid;
+			}
+
+			> .number {
+				margin-right: $grid/5;
+			}
+		}
+
+		> .info {
+			@include respond-to(medium) {
+				width: 50%;
+				padding-right: 5%;
+				padding-left: $grid;
+			}
+
+			> .title {
+				text-transform: uppercase;
+				margin-bottom: $grid;
+			}
+
+			> .description {
+				margin-bottom: $grid*2;
+
+				@include respond-to(medium) {
+					margin-bottom: $grid*3;
+				}
+			}
+
+			> .read-more {
+				// font-family: $base-font-family;
+				font-size: 1rem;
+				text-align: center;
+				text-transform: uppercase;
+
+				> a:hover {
+					opacity: .5;
+				}
+			}
+		}
+	}
+}

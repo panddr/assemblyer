@@ -1,0 +1,118 @@
+input, textarea {
+  display: inline-block;
+
+  font-family: $accent-font-family;
+  outline: none;
+  border-radius: 0;
+  background: white;
+  border: 0;
+  resize: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: $grid/2 $grid/2;
+  margin: 0;
+  font-size: 1.3rem;
+
+  &:focus::-webkit-input-placeholder {
+    color: $color-main;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    background: white;
+  }
+}
+
+textarea {
+  hyphens: none;
+}
+
+input[type=submit], .button, button {
+  display: inline-block;
+
+  font-family: $accent-font-family;
+  background: white;
+  box-shadow: none;
+  transition: background .3s $base-transition-style, color .3s $base-transition-style, border-color .3s $base-transition-style, opacity.3s $base-transition-style;
+  padding: $grid/4 $grid;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: $color-main;
+  -webkit-appearance: none;
+  border: 1px solid $color-main;
+  font-variant-numeric: normal;
+
+  &:hover {
+    background: $color-main;
+    border-color: $color-main;
+    color: white;
+    text-decoration: initial;
+  }
+
+  @include respond-to(medium) {
+    padding: $grid/4 $grid/2*3;
+  }
+}
+
+button:focus {
+  outline:0;
+}
+
+.button.button-download {
+  border-radius: 30px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  padding: $grid/2 $grid;
+  font-size: 1.6rem;
+}
+
+
+.button-admin {
+  display: inline-block;
+
+  background: $color-grey-button;
+  padding: $grid/2 $grid;
+  transition: background .3s $base-transition-style, color .3s $base-transition-style, border-color .3s $base-transition-style;
+
+  font-size: 1.3rem;
+
+  &:hover {
+    background: $color-grey-button-hover;
+  }
+
+  @include respond-to(large) {
+    width: 214px;
+    text-align: center;
+  }
+}
+
+.load-more-wrapper,
+.load-previous-wrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  .button-load-more,
+  .button-load-previous {
+    font-size: 1rem;
+    padding: $grid;
+    margin-bottom: $grid/2*5;
+    text-transform: uppercase;
+    overflow-anchor: none;
+    line-height: .8;
+    width: 100%;
+    text-align: center;
+
+    @include respond-to(small) {
+      font-size: 1.2rem;
+      margin-bottom: $grid*5;
+      width: auto;
+    }
+  }
+}
+
+.button-load-previous {
+  margin-bottom: $grid*2;
+}

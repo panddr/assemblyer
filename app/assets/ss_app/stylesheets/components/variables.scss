@@ -1,0 +1,34 @@
+$color-main: #111;
+$color-grey: #F3F3F3;
+$color-bg: #fff;
+$color-grey-button: #dddddd;
+$color-grey-button-hover: #c1c1c1;
+$color-grey-light: #e1e1e1;
+$color-grey-dark: #919191;
+$color-orange: #FF6701;
+
+$accent-font-family: 'CSTMX', -apple-system, BlinkMacSystemFont, HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+$title-font-family: 'CSTMX Title', -apple-system, BlinkMacSystemFont, HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+$base-font-family: 'Noto Serif', serif;
+
+$grid: 20px;
+$sizeXXL:       1380px;
+$sizeXL:        1280px;
+$sizeL:         1024px;
+$sizeM:         768px;
+$sizeS:         320px;
+
+$sizeMax:       $sizeXXL;
+
+$row-width-s:     90%;
+$row-width-m:     740px;
+$row-width-l:     964px;
+$row-width-xl:    1180px;
+$row-width-xxl:   1332px;
+
+
+$width-content-large: 800px;
+$width-content-medium: 500px;
+$width-content-small: 280px;
+
+$base-transition-style: cubic-bezier(0.660, 0.000, 0.070, 1.000);
