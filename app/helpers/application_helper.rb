@@ -3,6 +3,10 @@ module ApplicationHelper
   def header_locale
     I18n.t('header')
   end
+  
+  def main_locale
+    I18n.t('main')
+  end
 
   def blocks_locale
     I18n.t('blocks')
