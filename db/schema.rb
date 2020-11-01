@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_01_090853) do
+ActiveRecord::Schema.define(version: 2020_11_01_094830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abouts", force: :cascade do |t|
+    t.string "space_ru"
+    t.string "space_en"
+    t.string "mission_ru"
+    t.string "mission_en"
+    t.string "expert_ru"
+    t.string "expert_en"
+    t.string "team_ru"
+    t.string "team_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false

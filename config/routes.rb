@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     get '/programme', to: 'programme#index'
     get '/contacts/edit', to: 'contacts#edit'
     put '/contacts/edit', to: 'contacts#update'
-    get '/about', to: 'about#index'
+    get '/about/edit', to: 'about#edit'
+    put '/about/edit', to: 'about#update'
   
   end
 

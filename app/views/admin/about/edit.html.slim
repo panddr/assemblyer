@@ -1,0 +1,58 @@
+.row.fixed-header
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+        h5 О проекте
+      .ibox-content
+        = simple_form_for @about, url: admin_about_edit_path, method: 'PUT', html: {multipart: true, class: 'form-horizontal'} do |f|
+          .form-group class=('has-error' if @about.errors[:caption_ru].any?)
+            = f.label 'Пространство ', { class: 'control-label col-sm-2', required: false }
+            .col-sm-8
+              = f.input :space_ru, input_html: { class: 'form-control' }, label: false, as: :text
+
+          .form-group class=('has-error' if @about.errors[:caption_en].any?)
+            .col-sm-8
+              = f.input :space_en, input_html: { class: 'form-control' }, label: false, as: :text
+          br
+          br
+          br
+
+          .form-group class=('has-error' if @about.errors[:caption_ru].any?)
+            = f.label 'Миссия', { class: 'control-label col-sm-2', required: false }
+            .col-sm-8
+              = f.input :mission_ru, input_html: { class: 'form-control' }, label: false, as: :text
+ 
+          .form-group class=('has-error' if @about.errors[:caption_ru].any?)
+            .col-sm-8
+              = f.input :mission_en, input_html: { class: 'form-control' }, label: false, as: :text
+          br
+          br
+          br
+
+          .form-group class=('has-error' if @about.errors[:caption_ru].any?)
+            = f.label 'Эксперты', { class: 'control-label col-sm-2', required: false }
+            .col-sm-8
+              = f.input :expert_ru, input_html: { class: 'form-control' }, label: false, as: :text
+ 
+          .form-group class=('has-error' if @about.errors[:caption_ru].any?)
+            .col-sm-8
+              = f.input :expert_en, input_html: { class: 'form-control' }, label: false, as: :text
+          br
+          br
+          br
+          .form-group class=('has-error' if @about.errors[:caption_ru].any?)
+            = f.label 'Коллектив', { class: 'control-label col-sm-2', required: false }
+            .col-sm-8
+              = f.input :team_ru, input_html: { class: 'form-control' }, label: false, as: :text
+ 
+          .form-group class=('has-error' if @about.errors[:caption_ru].any?)
+            .col-sm-8
+              = f.input :team_en, input_html: { class: 'form-control' }, label: false, as: :text
+          br
+          br
+          br
+          .form-group.form-group-actions
+            .col-sm-4.col-sm-offset-2
+              = link_to 'Back', admin_root_path, class: 'btn btn-white'
+              = f.submit 'Save', class: 'btn btn-primary'
+
