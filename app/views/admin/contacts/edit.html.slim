@@ -4,15 +4,15 @@
       .ibox-title
         h5 Контакты
       .ibox-content
-        = simple_form_for @pageContent, url: admin_mainpage_edit_path, method: 'PUT', html: {multipart: true, class: 'form-horizontal'} do |f|
-          .form-group class=('has-error' if @pageContent.errors[:caption_ru].any?)
+        = simple_form_for @contact, url: admin_contacts_edit_path, method: 'PUT', html: {multipart: true, class: 'form-horizontal'} do |f|
+          .form-group class=('has-error' if @contact.errors[:caption_ru].any?)
             = f.label 'ru', { class: 'control-label col-sm-2', required: false }
             .col-sm-8
               = f.input :caption_ru, input_html: { class: 'form-control' }, label: false, as: :text
           br
           br
           br
-          .form-group class=('has-error' if @pageContent.errors[:caption_en].any?)
+          .form-group class=('has-error' if @contact.errors[:caption_en].any?)
             = f.label 'en', { class: 'control-label col-sm-2', required: false }
             .col-sm-8
               = f.input :caption_en, input_html: { class: 'form-control' }, label: false, as: :text

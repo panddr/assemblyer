@@ -17,7 +17,7 @@
           = link_to admin_programme_path
             span.nav-label Программа
         li class = ('active' if controller_name == 'contacts')
-          = link_to admin_contacts_path
+          = link_to admin_contacts_edit_path
             span.nav-label Контакты
         li style="margin-bottom:20px;"
           = link_to "Выйти", destroy_admin_session_path, :method=>'delete'

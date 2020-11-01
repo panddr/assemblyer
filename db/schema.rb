@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_30_143241) do
+ActiveRecord::Schema.define(version: 2020_11_01_090853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 2020_10_30_143241) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "caption_ru"
+    t.string "caption_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "main_page", force: :cascade do |t|
     t.string "caption_ru"
     t.string "caption_en"
@@ -34,6 +41,11 @@ ActiveRecord::Schema.define(version: 2020_10_30_143241) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-
+  create_table "main_pages", force: :cascade do |t|
+    t.string "caption_ru"
+    t.string "caption_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
