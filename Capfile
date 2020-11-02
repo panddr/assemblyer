@@ -1,24 +1,18 @@
-require 'capistrano/rails'
-require 'capistrano/passenger'
-require 'capistrano/rbenv'
-
-set :rbenv_type, :user
-set :rbenv_ruby, '2.6.3'
 # Load DSL and set up stages
-require "capistrano/setup"
+require 'capistrano/setup'
 
 # Include default deployment tasks
-require "capistrano/deploy"
+require 'capistrano/deploy'
 
 # Load the SCM plugin appropriate to your project:
 #
-# require "capistrano/scm/hg"
+# require 'capistrano/scm/hg'
 # install_plugin Capistrano::SCM::Hg
 # or
-# require "capistrano/scm/svn"
+# require 'capistrano/scm/svn'
 # install_plugin Capistrano::SCM::Svn
 # or
-require "capistrano/scm/git"
+require 'capistrano/scm/git'
 install_plugin Capistrano::SCM::Git
 
 # Include tasks from other gems included in your Gemfile
@@ -32,13 +26,25 @@ install_plugin Capistrano::SCM::Git
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 #
-# require "capistrano/rvm"
-# require "capistrano/rbenv"
-# require "capistrano/chruby"
-# require "capistrano/bundler"
-# require "capistrano/rails/assets"
-# require "capistrano/rails/migrations"
-# require "capistrano/passenger"
+# require 'capistrano/rvm'
+# require 'capistrano/rbenv'
+# require 'capistrano/chruby'
+require 'capistrano/bundler'
+# require 'capistrano/rails/assets'
+# require 'capistrano/rails/migrations'
+# require 'capistrano/passenger'
+require 'capistrano/rails'
+require 'capistrano/passenger'
+require 'capistrano/rbenv'
+# require 'rollbar/capistrano3'
+
+set :rbenv_type, :user
+set :rbenv_ruby, '2.6.3'
+
+# require 'capistrano/sidekiq'
+# require 'whenever/capistrano'
+# require 'capistrano/sitemap_generator'
+# require 'capistrano/sidekiq/monit' #to require monit tasks # Only for capistrano3
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
-Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
