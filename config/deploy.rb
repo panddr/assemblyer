@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "assemblyer"
-set :repo_url, "git@example.com:pwgen777/assemblyer.git"
+set :repo_url, "git@github.com:pwgen777/assemblyer.git"
 
 set :rbenv_map_bins, %w(rake gem bundle ruby rails)
 
