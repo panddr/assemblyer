@@ -1,4 +1,4 @@
-td = simple_format(@space)
-td = simple_format(@mission)
-td = simple_format(@expert)
-td = simple_format(@team)
+td = localized_attribute(@space, 'space').html_safe
+td = localized_attribute(@mission, 'mission').html_safe
+td = localized_attribute(@expert, 'expert').html_safe
+td = localized_attribute(@team, 'team').html_safe
