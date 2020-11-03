@@ -11,6 +11,8 @@ set :rbenv_map_bins, %w(rake gem bundle ruby rails)
 set :deploy_to, "/home/deploy/#{fetch :application}"
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
+# Default value for :linked_files is []
+append :linked_files, 'config/master.key'
 
 # Only keep the last 5 releases to save disk space
 set :keep_releases, 5
