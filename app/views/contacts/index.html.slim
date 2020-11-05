@@ -1,3 +1,3 @@
 
-td = localized_attribute(@contacts, 'caption').html_safe
+td = localized_attribute(@contacts, 'caption').gsub("\n", "<br>").html_safe
 

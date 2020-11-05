@@ -1,1 +1,1 @@
-td = localized_attribute(@main_page, 'caption').html_safe
+td = localized_attribute(@main_page, 'caption').gsub("\n", "<br>").html_safe
