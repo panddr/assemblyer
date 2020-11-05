@@ -1,4 +1,4 @@
-td = localized_attribute(@space, 'space').html_safe
-td = localized_attribute(@mission, 'mission').html_safe
-td = localized_attribute(@expert, 'expert').html_safe
-td = localized_attribute(@team, 'team').html_safe
+.title = localized_attribute(@space, 'space').gsub("\n", "<br>").html_safe
+.title = localized_attribute(@mission, 'mission').gsub("\n", "<br>").html_safe
+.title = localized_attribute(@expert, 'expert').gsub("\n", "<br>").html_safe
+.title = localized_attribute(@team, 'team').gsub("\n", "<br>").html_safe
