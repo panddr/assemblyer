@@ -1,0 +1,24 @@
+.row.fixed-header
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+        h5 Программа
+      .ibox-content
+        = simple_form_for @programme, url: admin_programme_edit_path, method: 'PUT', html: {multipart: true, class: 'form-horizontal'} do |f|
+          .form-group class=('has-error' if @programme.errors[:caption_ru].any?)
+            = f.label 'ru', { class: 'control-label col-sm-2', required: false }
+            .col-sm-8
+              = f.input :caption_ru, input_html: { class: 'form-control' }, label: false, as: :text
+          br
+          br
+          br
+          .form-group class=('has-error' if @programme.errors[:caption_en].any?)
+            = f.label 'en', { class: 'control-label col-sm-2', required: false }
+            .col-sm-8
+              = f.input :caption_en, input_html: { class: 'form-control' }, label: false, as: :text
+
+          .form-group.form-group-actions
+            .col-sm-4.col-sm-offset-2
+              = link_to 'Back', admin_root_path, class: 'btn btn-white'
+              = f.submit 'Save', class: 'btn btn-primary'
+

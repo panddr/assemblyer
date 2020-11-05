@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get '/mainpage/edit', to: 'mainpage#edit'
     put '/mainpage/edit', to: 'mainpage#update'
     get '/programme', to: 'programme#index'
+    get '/programme/edit', to: 'programme#edit'
+    put '/programme/edit', to: 'programme#update'
     get '/contacts/edit', to: 'contacts#edit'
     put '/contacts/edit', to: 'contacts#update'
     get '/about/edit', to: 'about#edit'
