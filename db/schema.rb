@@ -47,13 +47,6 @@ ActiveRecord::Schema.define(version: 2020_11_05_132122) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "main_page", force: :cascade do |t|
-    t.string "caption_ru"
-    t.string "caption_en"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "main_pages", force: :cascade do |t|
     t.string "caption_ru"
     t.string "caption_en"
