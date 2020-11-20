@@ -1,34 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   header:
     main: '<a href="/en">[photo.Way to homepage]</a>'
@@ -36,11 +5,11 @@ en:
     contact: '<a href="/en/contacts">Contacts</a>'
     programm: '<a href="/en/programme">Programme</a>'
   footer:
-    description: 'The EastEast project is published by the <a href="/en/cca">Cultural Creative Agency</a>. CCA brings together an intellectual approach and aesthetic vision in order to build new ways of representation for cultures, countries, and their people. Its vision is to open up a cartography of solidarity across borders. While studying the diversity of human societies in time and space, CCA links the local and the global, the material and the spiritual, and the past and the present in a search for commonalities, offering various approaches to understanding and responding to contemporary challenges.'
+    description: ''
   meta:
     title_homepage: 'Assembly'
     title_about: 'About'
     title_contact: 'Contacts'
     title_programme: 'Programme'
-    homepage_description: ''
+    homepage_description: 'A space that combines the features of an inclusive creative laboratory and an institute for the development and study of various artistic, research and discussion practices.'
 
