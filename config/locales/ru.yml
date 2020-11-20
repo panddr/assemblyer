@@ -7,5 +7,10 @@ ru:
     footer:
       description: ''
     meta:
+      title_homepage: 'Ассамблея'
+      title_about: 'О проекте'
+      title_contact: 'Контакты'
+      title_programme: 'Программа'
+
       homepage_description: ''
   
