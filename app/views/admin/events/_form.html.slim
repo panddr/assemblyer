@@ -1,0 +1,34 @@
+.row.fixed-header
+  .col-lg-12
+	.ibox.float-e-margins
+	  .ibox-title
+		h5 Новое событие:
+		/   = @post.title_en.present? ? @post.title_en : 'New post'
+	  .ibox-content
+		= simple_form_for [:admin, @event], html: {multipart: true, class: 'form-horizontal'} do |f|
+		  .form-group class=('has-error' if @event.errors[:title_ru].any?)
+			= f.label 'Название', { class: 'control-label col-sm-2', required: false }
+			.col-sm-8
+			  = f.input :title_ru, input_html: { class: 'form-control' }, label: false
+		  .form-group class=('has-error' if @event.errors[:description_ru].any?)
+			= f.label 'Описание', { class: 'control-label col-sm-2', required: false }
+			.col-sm-8
+			  = f.input :description_ru, input_html: { class: 'form-control' }, label: false
+		  br
+		  br
+		  br
+			.form-group class=('has-error' if @event.errors[:title_en].any?)
+			= f.label 'Title', { class: 'control-label col-sm-2', required: false }
+			.col-sm-8
+			  = f.input :title_en, input_html: { class: 'form-control' }, label: false
+			= f.input :title_ru, input_html: { class: 'form-control' }, label: false
+
+		  .form-group class=('has-error' if @event.errors[:description_en].any?)
+			= f.label 'Description', { class: 'control-label col-sm-2', required: false }
+			.col-sm-8
+			  = f.input :description_en, input_html: { class: 'form-control' }, label: false
+
+		  .form-group.form-group-actions
+			.col-sm-4.col-sm-offset-2
+			  = link_to 'Back', admin_events_path, class: 'btn btn-white'
+			  = f.submit 'Save', class: 'btn btn-primary'

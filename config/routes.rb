@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    root to: 'event#index'
-    get '/event', to: 'event#index'
+    root to: 'events#index'
+    get '/event', to: 'events#index'
     get '/mainpage/edit', to: 'mainpage#edit'
     put '/mainpage/edit', to: 'mainpage#update'
     get '/programme', to: 'programme#index'
@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     put '/contacts/edit', to: 'contacts#update'
     get '/about/edit', to: 'about#edit'
     put '/about/edit', to: 'about#update'
+
+    resources :events do
+      get :new, to: 'events#new'
+    end
   
   end
 
