@@ -1,19 +1,12 @@
 html, body {
   height: 100%;
-}
-
-html {
   font-size: 16px;
-
-  @include respond-to(medium) {
-    font-size: 18px;
-  }
 }
 
 body {
   background: $color-bg;
   color: $color-main;
-  font-family: $accent-font-family;
+  font-family: $base-font-family;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.35;
@@ -27,69 +20,19 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
 
-  @include respond-to(medium) {
-    font-size: 18px;
-  }
-
   .notice,
   .alert {
     margin: 0;
   }
 
-  .homepage-issue {
-    width: 100%;
-
-    margin-bottom: $grid*3;
-
-    @include respond-to(medium) {
-      margin-bottom: $grid*4;
-      padding: 0 $grid;
-    }
-
-    > .homepage-issue-wrapper {
-      padding: $grid/4*3;
-
-      @include respond-to(medium) {
-        padding: $grid;
-      }
-
-      .title {
-        border-bottom: 1px solid $color-main;
-        padding-bottom: $grid/2;
-      }
-
-      .description {
-        margin-bottom: 0;
-        // max-width: 75%;
-        // font-size: 1.2rem;
-        // line-height: 1.4rem;
-
-        @include respond-to(medium) {
-          max-width: 75%;
-        }
-      }
-    }
-  }
-
-  &.popup-opened {
-    overflow: hidden;
-    height: 100vh;
-  }
-
   > .content {
     padding: 0 $grid/4*3;
     padding-top: 111px;
-    // margin-bottom: $grid*2;
+    font-size: 1.3rem;
 
     @include respond-to(medium) {
-      // margin-bottom: $grid*4;
       padding-top: 196px;
-      // padding-left: $grid*4;
     }
-
-    // @include respond-to(large) {
-    //   padding-left: $grid*5;
-    // }
   }
 }
 
@@ -130,28 +73,7 @@ p {
   margin-top: 0;
 }
 
-.subscribe-success {
-  margin: auto;
-  width: 100%;
-  max-width: $sizeM;
-  padding: $grid/4*3;
-
-  > a {
-    text-decoration: underline;
-  }
-}
-
 .resize-animation-stopper * {
   animation: none !important;
   transition: none !important;
-}
-
-.homepage,
-.homepage-new {
-  border-top: 1px solid $color-main;
-  padding-top: $grid;
-}
-
-.turbolinks-progress-bar {
-  display: none;
 }

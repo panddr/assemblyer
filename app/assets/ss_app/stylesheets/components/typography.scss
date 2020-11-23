@@ -1,53 +1,5 @@
-@font-face {
-  font-family: 'CSTMX';
-  // src: url('../../fonts/CSTMX_Regular.woff2') format('woff2'),
-      //  url('../../fonts/CSTMX_Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CSTMX Title';
-  // src: url('../../fonts/cstm_xprmntl_02_regular-regular-trial-webfont.woff2') format('woff2'),
-      //  url('../../fonts/cstm_xprmntl_02_regular-regular-trial-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'IBM Plex Serif';
-  // src: url('../../fonts/ibmplexserif-regular-webfont.woff2') format('woff2'),
-      //  url('../../fonts/ibmplexserif-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'IBM Plex Serif';
-  // src: url('../../fonts/ibmplexserif-italic-webfont.woff2') format('woff2'),
-      //  url('../../fonts/ibmplexserif-italic-webfont.woff') format('woff');
-  font-weight: italic;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Noto Serif';
-  // src: url('../../fonts/notoserif-regular-webfont.woff2') format('woff2'),
-      //  url('../../fonts/notoserif-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Noto Serif';
-  // src: url('../../fonts/notoserif-italic-webfont.woff2') format('woff2'),
-      //  url('../../fonts/notoserif-italic-webfont.woff') format('woff');
-  font-weight: italic;
-  font-style: italic;
-}
-
 @mixin header-font-size($size-normal, $size-small, $size-medium, $size-large, $size-xlarge) {
-  font-family:  $accent-font-family;
+  font-family:  $base-font-family;
   font-style: normal;
   font-weight: normal;
   font-stretch: normal;
