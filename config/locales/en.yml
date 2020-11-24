@@ -1,8 +1,8 @@
 en:
   header:
     about: 'About'
-    contact: 'Contacts'
-    programm: 'Programme'
+    contacts: 'Contacts'
+    programme: 'Programme'
   footer:
     description: ''
   meta:
