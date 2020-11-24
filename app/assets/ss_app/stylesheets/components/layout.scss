@@ -25,13 +25,8 @@ body {
   }
 
   > .content {
-    padding: 0 $grid/4*3;
-    padding-top: 111px;
     font-size: 1.3rem;
-
-    @include respond-to(medium) {
-      padding-top: 196px;
-    }
+    padding: 0 $grid/2;
   }
 }
 

@@ -1,5 +1,6 @@
 - meta title: "#{(meta_locale[:title_homepage])}",
        description: meta_locale[:homepage_description]
 
-
-.title = localized_attribute(@main_page, 'caption').gsub("\n", "<br>").html_safe
+.homepage
+	.logo-big =image_tag('/logo.png')
+	.short-description ==localized_attribute(@main_page, 'caption')
