@@ -3,4 +3,6 @@
 
 .homepage
 	.logo-big =image_tag('/logo.png')
-	.short-description ==localized_attribute(@main_page, 'caption')
+	div
+		.short-description ==localized_attribute(@main_page, 'caption')
+		.events
