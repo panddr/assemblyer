@@ -1,348 +1,77 @@
-.header-main {
+.header-assembly {
+	position: fixed;
+	top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 	justify-content: space-between;
 
-	position: absolute;
-	z-index: 99;
-
-	transition: top .6s $base-transition-style;
 	background: white;
-	padding: $grid/4*3;
-	width: 100%;
-	// height: 60px;
+	padding: $grid/4*3 $grid/2;
 
-	@include respond-to(medium) {
-		// position: static;
+	> .small-logo {
+		position: absolute;
+    left: $grid/2;
 
-  	// padding-left: $grid*4;
-  	// height: auto;
-  }
+    width: 20px;
 
-  // @include respond-to(large) {
-  // 	padding-left: $grid*5;
-  // }
-
-  &.logo-small {
-  	position: fixed;
-
-  	border-bottom: 1px solid $color-main;
-
-		.logo,
-		.menu-desktop-expanded,
-		.about {
-			display: none!important;
+    @include respond-to(medium) {
+			top: $grid/4;
 		}
 
-		.logo-small {
-			display: block;
-		}
+    > img {
+    	display: block;
 
-		.wrapper-right {
-			align-items: center;
-			justify-content: flex-end;
-		}
-
-		.menu-button-mobile {
-			@include respond-to(medium) {
-				position: static!important;
-		  }
-		}
-  }
-
-  &.active {
-  	> .menu-wrapper {
-			cursor: inherit;
-			transform: translateX(0);
-
-			@include respond-to(medium) {
-	    	transform: translateX(0);
-	    }
-
-			> .menu-button {
-				opacity: 0;
-				visibility: hidden;
-			}
-  	}
-
-  	> .overlay {
-  		@include respond-to(medium) {
-	    	display: block;
-	    }
-  	}
-
-  	> .icon-close {
-  		opacity: 1;
-			visibility: visible;
-  	}
+    	width: 100%;
+    }
 	}
 
-	> .wrapper-right {
-		display: flex;
-		flex-wrap: wrap;
+	> .mobile-menu-button {
+		margin-left: $grid/2*3;
 
 		@include respond-to(medium) {
-    	justify-content: space-between;
-
-	    width: 50%;
-    }
-
-    > .about {
 			display: none;
-
-			width: 80%;
-			max-width: 400px;
-			padding-right: $grid;
-
-			@include respond-to(medium) {
-				display: block;
-
-				padding-left: $grid;
-	    }
-
-      a {
-        text-decoration: underline;
-      }
-		}
-
-		> .lang {
-			line-height: 1;
-			text-transform: uppercase;
-		}
-
-		> .menu-button-mobile {
-			cursor: pointer;
-			width: 40px;
-			padding-left: $grid;
-
-			@include respond-to(medium) {
-				position: absolute;
-		    bottom: 22px; right: 15px;
-		  }
-
-			> img {
-				display: block;
-
-				width: 100%;
-			}
 		}
 	}
 
-	> .menu-desktop-expanded {
+	> .menu-mobile {
+		display: none;
+	}
+
+	> .desktop-menu {
 		display: none;
 
 		@include respond-to(medium) {
 			display: flex;
-			flex-wrap: wrap;
 
-    	width: 100%;
-    }
-
-    a {
-    	margin-right: $grid/2;
-
-    	&:hover {
-    		opacity: .5;
-    	}
-    }
-
-    span {
-    	opacity: .5;
-    	margin-right: $grid/2;
-    }
-	}
-
-	> .logo {
-		@include respond-to(medium) {
-    	margin-bottom: $grid*2;
-    }
-
-    > img {
-			width: 120px;
-
-	    @include respond-to(medium) {
-	    	width: 150px;
-	    }
-    }
-  }
-
-  > .logo-small {
-  	display: none;
-
-  	font-size: 1.4rem;
-    line-height: 1;
-    margin-top: -2px;
-  }
-
-  > .icon-close {
-		position: fixed;
-		top: 0; right: 0;
-		z-index: 99;
-
-		transition: opacity .3s $base-transition-style, visibility .3s $base-transition-style;
-		opacity: 0;
-		visibility: hidden;
-		cursor: pointer;
-		width: 45px;
-		padding: 12px 13px;
-
-		// @include respond-to(medium) {
-		// 	top: $grid/4*3; left: $grid/4*3; right: $grid/4*3;
-		// 	width: 22px; height: 22px;
-		// 	padding: 0;
-		// }
-	}
-
-
-
-  > .overlay {
-  	display: none;
-
-  	position: fixed;
-  	left: 0; top: 0; right: 240px; bottom: 0;
-  	z-index: 99;
-
-  	@include respond-to(medium) {
-    	right: 360px;
-    }
-  }
-
-	> .menu-wrapper {
-		transition: transform .3s $base-transition-style;
-		position: fixed;
-		right: 0; top: 0;
-    z-index: 9;
-
-		display: flex;
-
-		background: $color-orange;
-		width: 100%; height: 100%;
-		transform: translateX(100%);
-		padding: 11px $grid/4*3;
-
-		@include respond-to(medium) {
-			display: flex;
-	    justify-content: center;
-	    align-items: center;
-
-	    width: 360px;
-
-	  //   left: 0;
-
-			// cursor: pointer;
-			// width: $grid*20;
-			// padding: 0;
-			transform: translateX(360px);
+			position: absolute;
+	    left: 50%;
+	    top: 10px;
 		}
 
-		> .menu-main {
-			height: 100%;
+		> a {
+			text-decoration: underline;
+			margin-right: $grid/2;
+		}
+	}
 
-			// @include respond-to(medium) {
-		 //  	padding-left: $grid*2;
-		 //  }
-
-		  // @include respond-to(large) {
-		  // 	padding-left: $grid*5;
-		  // }
-
-			> .wrapper {
-				display: flex;
-				flex-wrap: wrap;
-
-				> .logo {
-					display: none;
-
-					@include respond-to(medium) {
-			    	display: block;
-			    }
-
-			    > img {
-						width: 60px;
-
-				    @include respond-to(medium) {
-				    	padding-top: $grid/4*3;
-				    	width: 150px;
-				    }
-			    }
-			  }
-
-			  > .links {
-			  	// @include respond-to(medium) {
-				  // 	padding-top: $grid*4;
-				  // 	font-size: 1.2rem;
-				  // }
-
-			  	> .group {
-			  		display: flex;
-				  	flex-wrap: wrap;
-
-				  	margin-bottom: 1rem;
-				  	text-transform: uppercase;
-
-				  	&.social {
-							display: flex;
-							flex-wrap: wrap;
-
-							position: absolute;
-							left: $grid/2; bottom: $grid/2;
-							margin: 0;
-
-							@include respond-to(medium) {
-						  	position: static;
-						  }
-
-							> a {
-								width: auto;
-								margin-right: $grid/2;
-
-								&.newsletter-link {
-									width: 100%;
-								}
-
-								&:last-child {
-									margin-right: 0;
-								}
-							}
-				  	}
-
-				  	&.lang {
-				  		display: flex;
-
-							text-transform: uppercase;
-
-							> a {
-								width: auto;
-							}
-				  	}
-
-			  		> a {
-							width: 100%;
-
-							&:hover {
-								opacity: .5;
-							}
-						}
-			  	}
-			  }
-			}
+	> .lang {
+    @include respond-to(medium) {
+			position: absolute;
+	    right: 10px;
+	    top: 10px;
 		}
 
-		> .menu-button {
-			display: none;
+		> .active {
+			color: $color-red;
+		}
 
-			transition: opacity .3s $base-transition-style, visibility .3s $base-transition-style;
-			text-transform: uppercase;
-
-			@include respond-to(medium) {
-				display: block;
-			}
-
-			> .wrapper {
-				@include respond-to(medium) {
-					transform: rotate(-90deg);
-				}
-			}
+		> a {
+			text-decoration: underline;
 		}
 	}
 }

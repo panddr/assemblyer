@@ -1,8 +1,14 @@
-.menu-desktop-expanded
-	.col == header_locale[:main]
-	.col == header_locale[:about]
-	.col == header_locale[:contact]
-	.col == header_locale[:programm]
+header.header-assembly
+	=link_to root_path, class: 'small-logo'
+		=image_tag('/small_logo.png')
+	.mobile-menu-button Меню
+	.desktop-menu
+		=link_to header_locale[:about], about_index_path
+		=link_to header_locale[:programme], programme_index_path
+		=link_to header_locale[:contacts], contacts_path
+	= render 'shared/lang'
+	.menu-mobile
+
 
 
 

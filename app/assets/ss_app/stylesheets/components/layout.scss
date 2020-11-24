@@ -8,13 +8,12 @@ body {
   color: $color-main;
   font-family: $base-font-family;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.35;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   word-wrap: break-word;
   overflow-x: hidden;
+  hyphens: auto;
 
   text-rendering: optimizeLegibility;
   -webkit-overflow-scrolling: touch;

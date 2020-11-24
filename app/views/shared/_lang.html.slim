@@ -1,6 +1,13 @@
-    = link_to 'EN', request.params.merge(locale: 'en')
-	span &nbsp;/&nbsp;
-	- path = request.path
-	- path.slice!('/en')
-	- path = path.present? ? path : '/'
-	= link_to 'RU', path
+.lang
+	- if I18n.locale == :ru
+		span.active РУ
+		span &nbsp;/&nbsp;
+		= link_to 'EN', request.params.merge(locale: 'en')
+	- else
+		- path = request.path
+		- path.slice!('/en')
+		- path = path.present? ? path : '/'
+		= link_to 'РУ', path
+		span &nbsp;/&nbsp;
+		span.active EN
+

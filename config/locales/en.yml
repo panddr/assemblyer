@@ -1,9 +1,8 @@
 en:
   header:
-    main: '<a href="/en">[photo.Way to homepage]</a>'
-    about: '<a href="/en/about">About</a>'
-    contact: '<a href="/en/contacts">Contacts</a>'
-    programm: '<a href="/en/programme">Programme</a>'
+    about: 'About'
+    contact: 'Contacts'
+    programm: 'Programme'
   footer:
     description: ''
   meta:

@@ -1,16 +1,13 @@
 ru:
-    header:
-      main: '<a href="/">[фото на глвную]</a>'
-      about: '<a href="/about">О проекте</a>'
-      contact: '<a href="/contacts">Контакты</a>'
-      programm: '<a href="/programme">Программа</a>'
-    footer:
-      description: ''
-    meta:
-      title_homepage: 'Ассамблея'
-      title_about: 'О проекте'
-      title_contact: 'Контакты'
-      title_programme: 'Программа'
-
-      homepage_description: 'Пространство, совмещающее в себе черты инклюзивной творческой лаборатории и института по разработке и изучению различных художественных, исследовательских и дискуссионных практик.'
-  
+  header:
+    about: 'О проекте'
+    contacts: 'Контакты'
+    programme: 'Программа'
+  footer:
+    description: ''
+  meta:
+    title_homepage: 'Ассамблея'
+    title_about: 'О проекте'
+    title_contact: 'Контакты'
+    title_programme: 'Программа'
+    homepage_description: 'Пространство, совмещающее в себе черты инклюзивной творческой лаборатории и института по разработке и изучению различных художественных, исследовательских и дискуссионных практик.'
